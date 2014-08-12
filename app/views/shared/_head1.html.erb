@@ -1,0 +1,9 @@
+<div class="header">
+<h1>title</h1>
+
+<% if session[:admin].present? %>
+  <%= link_to 'logout', admin_logout_path %>
+<% else %>
+  <%= link_to 'login', admin_login_path %>
+<% end %>
+<div>

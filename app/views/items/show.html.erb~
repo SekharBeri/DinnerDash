@@ -1,0 +1,6 @@
+<%= link_to 'Edit Item', edit_item_path %>
+<%= link_to 'back', items_path %><br/>
+<%= link_to 'destroy', @item, :method=> :delete %>
+  Name:<%= @item.title %><br/>
+  Description:<%= @item.description %><br/>
+  Price:<%= @item.price %><br/>

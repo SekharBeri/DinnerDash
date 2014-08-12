@@ -1,0 +1,6 @@
+<%= form_for :user do |u| %>
+  Email:<%= u.text_field :email %><br/>
+  Password:<%= u.password_field :password %><br/>
+  <%= u.submit 'signin' %>
+<% end %>
+<%= link_to 'new user', user_signup_path %> register here....!

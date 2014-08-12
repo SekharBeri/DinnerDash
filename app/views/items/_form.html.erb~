@@ -1,0 +1,19 @@
+<%= form_for @item do |item| %>
+  
+  <div class="text">
+    Name:<%= item.text_field :title %>
+  </div>
+  
+  <div class="text">
+    Description:<%= item.text_area :description %>
+  </div>
+  
+  <div class="text">
+   Price<%= item.text_field :price %>
+  </div>
+  
+  <div class="button">
+    <%= item.submit 'Create Item' %>
+  </div>
+  
+<% end %>

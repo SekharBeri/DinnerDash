@@ -1,0 +1,13 @@
+<% if session[:admin].present? %>
+  <%= render 'shared/head1'%>
+<% else %>
+  <%= render 'shared/head2'%>
+<% end %>
+<h2>List Of All Items</h2>
+<div class="list_items">
+  <% @items.each do |item| %>
+    Name:<%= link_to item.title, item_path(item) %><br/>
+    Description:<%= item.description %><br/>
+    Price:<%= item.price %><br/><hr/>
+  <% end %>
+</div>

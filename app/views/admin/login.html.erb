@@ -1,0 +1,6 @@
+<h2>Admin Login</h2>
+<%= form_for :admin do |a| %>
+  UserName:<%= a.text_field :user_name %><br/>
+  Password:<%= a.password_field :password %><br/>
+  <%= a.submit 'Login' %>
+<% end %>

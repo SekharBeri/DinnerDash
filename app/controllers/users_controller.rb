@@ -1,5 +1,13 @@
 class UsersController < ApplicationController
   
+  def index
+    @users = User.all
+  end
+  
+  def show
+    @user=User.find(params[:id])
+  end
+  
   def register
     @user=User.new
     if request.post?
@@ -14,6 +22,7 @@ class UsersController < ApplicationController
    if request.post?
     if User.exists?(:email => params[:user][:email], :password => params[:user][:password])
       session[:user] = User.find_by(:email => params[:user][:email], :password => params[:user][:password])
+     
       redirect_to items_path
     else
       render 'login'

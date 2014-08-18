@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'users/logout'
   match "admin/login" => "admin#login", as: :admin_login, via: [:get, :post]
   get 'admin/logout'
+  resources :users, only: [:index, :show]
+  get 'orders/store'
+  post ':controller(/:action(/:id))(.:format)'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

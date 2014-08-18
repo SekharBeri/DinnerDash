@@ -8,6 +8,10 @@
   <% @items.each do |item| %>
     Name:<%= link_to item.title, item_path(item) %><br/>
     Description:<%= item.description %><br/>
-    Price:<%= item.price %><br/><hr/>
+    Price:<%= item.price %><br/>
+    Category:<%= item.category.category_name %><br/>
+    <%= link_to 'AddToCart', orders_store_path(:item_id => item.id), :method=> :post %>
+    <hr/>
+    
   <% end %>
 </div>

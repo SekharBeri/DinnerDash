@@ -1,6 +1,7 @@
 <%= link_to 'Edit Item', edit_item_path %>
-<%= link_to 'back', items_path %><br/>
-<%= link_to 'destroy', @item, :method=> :delete %>
+<%= link_to 'back', items_path %>
+<%= link_to 'destroy', @item, :method=> :delete %><br/>
   Name:<%= @item.title %><br/>
   Description:<%= @item.description %><br/>
   Price:<%= @item.price %><br/>
+  Category:<%= @item.category.category_name %>

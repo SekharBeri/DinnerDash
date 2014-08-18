@@ -1,0 +1,5 @@
+<h2>List of Users</h2>
+<% @users.each do |user| %>
+  Name:<%= link_to (user.first_name + user.last_name), user_path(user) %><br/>
+  Email:<%= user.email %><hr/>
+<% end %>

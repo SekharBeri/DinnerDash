@@ -13,6 +13,10 @@
   </div>
   
   <div class="button">
+    Category:<%= item.select :category_id, options_from_collection_for_select(Category.all, :id, :category_name) %>
+  </div>
+
+  <div class="button">
     <%= item.submit 'Create Item' %>
   </div>
   

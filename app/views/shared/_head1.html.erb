@@ -3,6 +3,7 @@
 
 <% if session[:admin].present? %>
   <%= link_to 'logout', admin_logout_path %>
+  <%= link_to 'new Item', new_item_path %>
 <% else %>
   <%= link_to 'login', admin_login_path %>
 <% end %>
